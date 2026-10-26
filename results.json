@@ -1,0 +1,53 @@
+{
+  "seed": 42,
+  "epochs": 20,
+  "lr": 3e-05,
+  "batch": 16,
+  "unfreeze_clip": true,
+  "split_counts": {
+    "train": 2815,
+    "val": 637,
+    "test": 675,
+    "crack": [
+      2000,
+      544,
+      561
+    ],
+    "tape": [
+      815,
+      93,
+      114
+    ]
+  },
+  "thresholds": {
+    "crack": 0.5,
+    "tape": 0.25
+  },
+  "metrics": {
+    "segment crack": {
+      "n": 561,
+      "mIoU": 0.45128417713402935,
+      "Dice": 0.6014081279862573
+    },
+    "segment taping area": {
+      "n": 114,
+      "mIoU": 0.5388998599118653,
+      "Dice": 0.6912128967899328
+    },
+    "ALL (per image)": {
+      "n": 675,
+      "mIoU": 0.46608149244761937,
+      "Dice": 0.6165751556064336
+    },
+    "MEAN of 2 prompts": {
+      "n": 675,
+      "mIoU": 0.4950920185229473,
+      "Dice": 0.646310512388095
+    }
+  },
+  "train_minutes": 31.819856536388397,
+  "infer_ms": 38.383842397619176,
+  "model_mb": 603.173535,
+  "params_m": 150.747746,
+  "trainable_params_m": 150.747746
+}
